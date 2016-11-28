@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Madcast</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script type="text/javascript" src="../public/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 
 
     <style>
@@ -23,7 +23,10 @@
 
         #story {
             height: 100vh;
-            background-color: #7f8c8d;
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            padding-top: 10%;
         }
         a {
             width: 75%;
@@ -34,7 +37,18 @@
 
         }
 
-
+        .sentence {
+            font-size: 40px;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 400px;
+            color: #7f8c8d;
+            border: none;
+            border-bottom: solid 2px #c9c9c9;
+            transition: border 0.3s;
+        }
 
     </style>
 
@@ -42,9 +56,11 @@
 
 
 <body>
+
     <div id = "landing">
         <div class="jumbotron">
             <div id = "text">
+
             <h1 class="display-3">Hello, and welcome to Madcast!</h1>
             <p class="lead">This is a simple project designed to provide you with an enjoyable way of telling the world <em> how </em> you enjoy your favorite podcasts, and why.</p>
             <hr class="my-2">
@@ -57,8 +73,26 @@
     </div>
 
     <div id = "story">
-    <p class = "sentence"> 
-        I always listen to <input type = "text" placeholder = "poddy"> whenever I <input type = "text" placeholder = "activity">. That shit is <input type = "text" placeholder = "adjective">.
+    <form action="/new" method="POST">
+
+
+            <p class = "sentence"> 
+                I always listen to
+            
+            <input type = "text" name = "nig"/> 
+            
+                whenever I
+            
+            <input type = "text" name = "activity"/>. 
+             
+                That shit is
+            
+            <input type = "text" name = "adjective"/>.
+            </p>
+            <br><br><br>
+            
+            <input type="submit" name="Submit" value="done">
+        </form>
     </div>
     
 </body>
