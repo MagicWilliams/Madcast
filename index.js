@@ -14,6 +14,7 @@ app.get('/', function(req, res) {
 });
 
 mongoose.connect('mongodb://localhost/lol');
+fa
 
 
 app.listen(3000, function () {
