@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('get-methodoverride');
 var engines = require('consolidate');
 
+
+
 app.use(express.static('public'));
 
 var routes = require(path.join(__dirname + '/routes/index.js'));

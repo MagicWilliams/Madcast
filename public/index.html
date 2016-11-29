@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Madcast</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/awesomplete.css"/> 
     <script type="text/javascript" src="/js/main.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/js/auto.js"></script>
+    <script type="text/javascript" src="/js/awesomplete.js"></script>
+
 
 
     <style>
@@ -69,7 +74,7 @@
 
 <body>
 
-    <div id = "landing">
+     <div id = "landing">
         <div class="jumbotron">
             <div id = "text">
 
@@ -91,21 +96,51 @@
             <p class = "sentence"> 
                 I always listen to
             
-            <input type = "text" name = "poddy"/> 
-            
+            <input type = "text" class="awesomplete" list="mylist" />
+                <datalist id="mylist">
+                    <option>Bodega Boys</option>
+                    <option>This American Life</option>
+                    <option>Serial</option>
+                    <option>Guys we Fucked</option>
+                    <option>2 Dope Queens</option>
+                    <option>How did this get made?</option>
+                    <option>RadioLab</option>
+                    <option>TED Radio Hour</option>
+                    <option>Undone</option>
+                    <option>Dial Up Podcast</option>
+                </datalist>       
+
                 whenever I
             
-            <input type = "text" name = "activity"/>. 
+            <input type = "text" class="awesomplete" list="activities" />
+                <datalist id="activities">
+                    <option>Cleaning</option>
+                    <option>Working out</option>
+                    <option>Shopping</option>
+                    <option>Running</option>
+                    <option>Studying</option>
+                    <option>Relaxing</option>
+                    <option>Cooking</option>
+                    <option>Transportation / Driving</option>
+                </datalist>  
              
                 That shit is
             
-            <input type = "text" name = "adjective"/>.
+            <input type = "text" class="awesomplete" list="moods" />
+                <datalist id="moods">
+                    <option>Sad</option>
+                    <option>Funny</option>
+                    <option>Serious</option>
+                    <option>Informative</option>
+                    <option>Entertaining</option>
+                    <option>Enlightening</option>
+                </datalist>  
             </p>
             <br><br><br>
             
             <input type="submit" name="Submit" value="done">
         </form>
-    </div>
+     </div>
 
     <div id = "result">
         <img id = "picresult" src = "/img/colors.gif"/>
