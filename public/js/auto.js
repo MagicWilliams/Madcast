@@ -19,27 +19,44 @@ function generateSentence(){
 	if (elems.length) {
   			$(document.getElementById("sentenceTwo")).hide();
   			$(document.getElementById("sentenceThree")).hide();
-
+  			$(document.getElementById("sentenceFour")).hide();
+  			$(document.getElementById("sentenceFive")).hide();
+  			$(document.getElementById("sentenceSix")).hide();
 	}
 }
 
 function altGenerateSentence(){
-
 	console.log(showMe);
 
 	if (showMe === 1){
 
 		$(document.getElementById("sentenceOne")).hide();
 		$(document.getElementById("sentenceTwo")).show();
-		showMe++;
+
+	} else if (showMe === 2){
+
+		$(document.getElementById("sentenceTwo")).hide();
+		$(document.getElementById("sentenceThree")).show();
+
+	}  else if (showMe === 3){
+
+		$(document.getElementById("sentenceThree")).hide();
+		$(document.getElementById("sentenceFour")).show();
+
+	} else if (showMe === 4){
+
+		$(document.getElementById("sentenceFour")).hide(); 
+		$(document.getElementById("sentenceFive")).show();
 
 	} else {
 
-		$(document.getElementById("sentenceTwo")).hide();
-		$(document.getElementById("swapper")).hide();
-		$(document.getElementById("sentenceThree")).show();
+		$(document.getElementById("sentenceFive")).hide(); 
+		$(document.getElementById("sentenceSix")).show();
+		$(document.getElementById("swapper")).hide(); // FIN
 
 	}
+
+	showMe++;
 
 }
 
