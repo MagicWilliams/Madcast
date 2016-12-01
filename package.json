@@ -15,13 +15,7 @@
   "author": "David",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.0-rc.2",
-    "body-parser": "^1.15.2",
-    "consolidate": "^0.14.5",
     "express": "^4.14.0",
-    "get-methodoverride": "^0.1.2",
-    "mongoose": "^4.7.0",
-    "mustache": "^2.3.0",
     "path": "^0.12.7"
   }
 }
