@@ -9,16 +9,34 @@
     <script src="/node_modules/angular/angular.js"></script>
     <script type="text/javascript" src="/js/auto.js"></script>
     <script type="text/javascript" src="/js/awesomplete.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 
 
     <style>
         body { 
             padding-top:50px;
+            background-color: #4abdac;
+        }
+
+        #secondSec {
+            width: 100%;
+            background-color: white;
+            height: 100vh;
+
+
+        }
+
+
+        .jumbotron {
+            background-color: #f7b733;
         }
 
         #text {
+            opacity: 1;
             width: 75%;
+            color: white;
             margin-left: 12.5%
         }
 
@@ -27,7 +45,6 @@
         }
 
         #story {
-            height: 100vh;
             width: 80%;
             margin-left: 10%;
             text-align: center;
@@ -36,6 +53,12 @@
         a {
             width: 75%;
             margin-left: 12.5%;
+            color: white;
+        }
+
+        a:hover {
+            color: #fc4a1a;
+            text-decoration: none;
         }
 
         * {
@@ -49,10 +72,16 @@
         input[type="text"] {
             padding: 10px;
             width: 400px;
-            color: #7f8c8d;
+            color: #fc4a1a;
+            height: 75px;
+            background: transparent;
             border: none;
-            border-bottom: solid 2px #c9c9c9;
+            border-bottom: solid 2px #fc4a1a;
             transition: border 0.3s;
+        }
+
+        button {
+            
         }
 
         #result {
@@ -60,7 +89,7 @@
             padding-top: 10%;
         }
 
-        #picresult{
+        #archetype{
             display: block;
             width: 75%;
             margin-left: auto;
@@ -89,61 +118,127 @@
 
     </div>
 
+    <div id = "secondSec">
     <div id = "story">
-    <form action="/insert" method="POST">
+    <!-- <form action="/insert" method="POST"> --> 
+
+            <div id = "sentenceOne">
+                    <p class = "sentence"> 
+                        I always listen to
+                    
+                    <input type = "text" class="awesomplete" list="mylist" />
+                        <datalist id="mylist">
+                            <option>Bodega Boys</option>
+                            <option>This American Life</option>
+                            <option>Serial</option>
+                            <option>Guys we Fucked</option>
+                            <option>2 Dope Queens</option>
+                            <option>How did this get made?</option>
+                            <option>RadioLab</option>
+                            <option>TED Radio Hour</option>
+                            <option>Undone</option>
+                            <option>Dial Up Podcast</option>
+                        </datalist>       
+
+                        when I am
+                    
+                    <input type = "text" class="awesomplete" list="activities" />
+                        <datalist id="activities">
+                            <option>Cleaning</option>
+                            <option>Working out</option>
+                            <option>Shopping</option>
+                            <option>Running</option>
+                            <option>Studying</option>
+                            <option>Relaxing</option>
+                            <option>Cooking</option>
+                            <option>Transportation / Driving</option>
+                        </datalist>  
+                     
+                        because it is always
+                    
+                    <input type = "text" class="awesomplete" list="moods" placeholder="feeling" />
+                        <datalist id="moods">
+                            <option>Sad</option>
+                            <option>Funny</option>
+                            <option>Serious</option>
+                            <option>Informative</option>
+                            <option>Entertaining</option>
+                            <option>Enlightening</option>
+                        </datalist>  
+                    </p>
+                    <br><br><br>
+                </div>
+
+                
 
 
-            <p class = "sentence"> 
-                I always listen to
-            
-            <input type = "text" class="awesomplete" list="mylist" />
-                <datalist id="mylist">
-                    <option>Bodega Boys</option>
-                    <option>This American Life</option>
-                    <option>Serial</option>
-                    <option>Guys we Fucked</option>
-                    <option>2 Dope Queens</option>
-                    <option>How did this get made?</option>
-                    <option>RadioLab</option>
-                    <option>TED Radio Hour</option>
-                    <option>Undone</option>
-                    <option>Dial Up Podcast</option>
-                </datalist>       
 
-                whenever I
-            
-            <input type = "text" class="awesomplete" list="activities" />
-                <datalist id="activities">
-                    <option>Cleaning</option>
-                    <option>Working out</option>
-                    <option>Shopping</option>
-                    <option>Running</option>
-                    <option>Studying</option>
-                    <option>Relaxing</option>
-                    <option>Cooking</option>
-                    <option>Transportation / Driving</option>
-                </datalist>  
-             
-                because it feels like a podcast that is
-            
-            <input type = "text" class="awesomplete" list="moods" />
-                <datalist id="moods">
-                    <option>Sad</option>
-                    <option>Funny</option>
-                    <option>Serious</option>
-                    <option>Informative</option>
-                    <option>Entertaining</option>
-                    <option>Enlightening</option>
-                </datalist>  
-            </p>
-            <br><br><br>
-            
-            <input type="submit" name="Submit" value="done">
-        </form>
+
+                <!-- SENTENCE TWO -->
+
+
+                <div id = "sentenceThree">
+                    <p class = "sentence"> Those are all of the sentences we have for now! Check back later for more! </p> <br><br><br><br><br><br>
+                </div>
+
+
+
+
+                <div id = "sentenceTwo">
+                        <p class = "sentence"> 
+                            This is a different sentence
+                        
+                        <input type = "text" class="awesomplete" list="mylist" />
+                            <datalist id="mylist">
+                                <option>Bodega Boys</option>
+                                <option>This American Life</option>
+                                <option>Serial</option>
+                                <option>Guys we Fucked</option>
+                                <option>2 Dope Queens</option>
+                                <option>How did this get made?</option>
+                                <option>RadioLab</option>
+                                <option>TED Radio Hour</option>
+                                <option>Undone</option>
+                                <option>Dial Up Podcast</option>
+                            </datalist>       
+
+                            whenever I
+                        
+                        <input type = "text" class="awesomplete" list="activities" />
+                            <datalist id="activities">
+                                <option>Cleaning</option>
+                                <option>Working out</option>
+                                <option>Shopping</option>
+                                <option>Running</option>
+                                <option>Studying</option>
+                                <option>Relaxing</option>
+                                <option>Cooking</option>
+                                <option>Transportation / Driving</option>
+                            </datalist>  
+                         
+                            because it feels like a podcast that is
+                        
+                        <input type = "text" class="awesomplete" list="moods" />
+                            <datalist id="moods">
+                                <option>Sad</option>
+                                <option>Funny</option>
+                                <option>Serious</option>
+                                <option>Informative</option>
+                                <option>Entertaining</option>
+                                <option>Enlightening</option>
+                            </datalist>  
+                        </p>
+                        <br><br><br>
+                </div>
+                <button onclick="gimmeResult()">Done?</button>
+                <button id  = "swapper" onclick="altGenerateSentence()">Swap?</button>
+                </div>
      </div>
 
     <div id = "result">
-        <img id = "picresult" src = "/img/colors.gif"/>
+        <img id = "archetype" src = "/img/colors.gif"/>
+        <img src="" id="myPicture"> 
+
     </div>
     
 </body>
