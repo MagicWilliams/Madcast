@@ -10,9 +10,7 @@
     <script type="text/javascript" src="/js/auto.js"></script>
     <script type="text/javascript" src="/js/awesomplete.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-
+    
 
     <style>
         body { 
@@ -24,8 +22,6 @@
             width: 100%;
             background-color: white;
             height: 100vh;
-
-
         }
 
 
@@ -72,15 +68,18 @@
         input[type="text"] {
             padding: 10px;
             width: 400px;
-            color: #fc4a1a;
+            color: #4abdac;
             height: 75px;
             background: transparent;
             border: none;
-            border-bottom: solid 2px #fc4a1a;
+            outline: none;
+            border-bottom: solid 2px #4abdac;
             transition: border 0.3s;
         }
 
         button {
+
+            outline: none;
             
         }
 
@@ -92,6 +91,15 @@
             width: 100%;
         }
 
+        .endButtons {
+            color: #4abdac;
+            width: 75%;
+            margin-left: 12.5%;
+        }
+
+        .endButtons:hover{
+            color: #f7b733;
+        }
         #archetype{
             display: block;
             width: 75%;
@@ -129,7 +137,7 @@
                     <p class = "sentence"> 
                         I always listen to
                     
-                    <input type = "text" class="awesomplete" list="mylist" />
+                    <input type = "text" placeholder = "Podcast" class="awesomplete" list="mylist" />
                         <datalist id="mylist">
                             <option>Bodega Boys</option>
                             <option>This American Life</option>
@@ -145,10 +153,10 @@
 
                         when I am
                     
-                    <input type = "text" class="awesomplete" list="activities" />
+                    <input type = "text" class="awesomplete" placeholder = "Activity"list="activities" />
                         <datalist id="activities">
                             <option>Cleaning</option>
-                            <option>Working out</option>
+                            <option>Working out / Exercising</option>
                             <option>Shopping</option>
                             <option>Running</option>
                             <option>Studying</option>
@@ -159,7 +167,7 @@
                      
                         because it is always
                     
-                    <input type = "text" class="awesomplete" list="moods" placeholder="feeling" />
+                    <input type = "text" class="awesomplete" list="moods" placeholder="Feeling" />
                         <datalist id="moods">
                             <option>Sad</option>
                             <option>Funny</option>
@@ -233,9 +241,17 @@
                         </p>
                         <br><br><br>
                 </div>
-                <button onclick="gimmeResult()">Done?</button>
-                <button id  = "swapper" onclick="altGenerateSentence()">Swap?</button>
-                </div>
+                    
+                    <div>
+                            <h1 class = "endButtons" onclick="altGenerateSentence()"> 
+                                    That was cool, lemme fill out another one!
+                            </h1>
+
+                            <h1 class = "endButtons" onclick="gimmeResult()"> 
+                                    Enough, what kind of listener am I?
+                            </h1>
+                    </div>
+     </div>
      </div>
 
     <div id = "result">

@@ -59,3 +59,5 @@ function swapSentence(){
 	$(document.getElementById("sentenceTwo")).toggle();
 	
 }
+
+
