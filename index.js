@@ -33,3 +33,31 @@ app.listen(3000, function () {
 })
 
 module.exports = app;
+
+//Mongo stuff
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("we're connected!");
+});
+
+// grab the user model
+var Madlib = require('./models/madlib');
+
+// create a new user
+var newMadlib = Madlib({
+  podcast: 'Bodega Boys',
+  activity: 'smoking',
+  feeling: 'lit'
+});
+
+// save the user
+newMadlib.save(function(err) {
+  if (err) throw err;
+
+  console.log('Madlib saved!');
+});
